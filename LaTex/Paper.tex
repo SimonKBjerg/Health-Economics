@@ -19,9 +19,13 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{setspace}
+\usepackage{dcolumn}
+\usepackage{adjustbox}
+\usepackage{rotating}
 \onehalfspacing
 \graphicspath{ {/home/user/images/} }
- 
+
+
 % Opening
 \title{Kidney disease \& Transplantations in Denmark}
 \author{Emilie Nordby Lauritzen \& Simon Kjær Bjerg}
@@ -44,20 +48,23 @@
 
 Living with a kidney disease is a life changing diagnosis that XXX live with in Denmark every year. Even with modern medicine the only cure for kidney disease is receiving a new organ. This reality means that there is a tremendous demand for donor kidneys, a demand that by far is exceeding the supply. Every year XXX dies while on a waiting list for a new kidney. 
 \\\\
-A lot of paper argue that the current Danish kidney program is inefficient reference and that the amount of donor kidneys could be increased by implementing a donor system. If Denmark were to actually implement a donor kidney system, it would be based on the premise, that kidney transplantations is favored in a socio-economic perspective relative to the patients with a kidney disease just getting dialysis. Based on this argument the paper seeks to perform a Cost Utility Analysis on kidney transplants weighted against the alternative, dialysis.
+A lot of papers argue that the current Danish kidney program is inefficient reference and that the amount of donor kidneys could be increased by implementing a donor system. If Denmark were to actually implement a donor kidney system, it would be based on the premise, that kidney transplantations is favored in a socio-economic perspective relative to the patients with a kidney disease just getting dialysis. Based on this argument the paper seeks to perform a Cost Utility Analysis on kidney transplants weighted against the alternative, dialysis.
 
 \subsection{Purpose}
 
 The purpose of this paper is to analyse and compare the possible means of treatment, for individuals living with kidney disease. The paper aims to illuminate the cost and benefits associated with the distinct treatment interventions.
 \\\\
-To make this comparison, the paper seeks to uncover the price of dialysis and kidney transplantations and on that basis estimate the cost of both interventions. Furthermore we seek to approximate the, before mentioned costs, in both a societal and regional perspective. Moreover we will investigate the effect of treatment in a Quality Adjusted Life Year framework, to better understand the associated output in addition to merely the costs.
+To make this comparison, the paper seeks to uncover the price of dialysis and kidney transplantations and on that basis estimate the cost of both interventions. Furthermore we seek to approximate the before mentioned costs, in both a societal and regional perspective. Moreover we will investigate the effect of treatment in a Quality Adjusted Life Year framework, to better understand the associated output in addition to merely considering the costs.
 
 
 \subsection{Limitations \& assumptions}
 
+
+
+
 \section{Method}
 
-\subsection{Cost Effectiveness Models }
+\subsection{Cost Effectiveness Models}
 
 When evaluating if a health program should be implemented or not, three different methods are commonly used; Cost Benefit Analysis (CBA), Cost Effectiveness Analysis (CEA) and Cost Utility Analysis (CUA). The approach and conclusion of the three methods differ, which makes them useful for different kinds of analyses. An effectiveness analysis consists of two parts, the costs and the effects of the intervention. The way the costs are estimated will generally be the same for the three effectiveness analyses, while the measurement of the effect will differ depending on the approach used \cite{Christiansen2010}. In the following we will outline the method for each of the effectiveness analysis above and from this deduct the method we will use in this paper.  
 \\\\
@@ -101,9 +108,6 @@ The foundation for the Cost Utility Analysis is a Markov Chain model. A Markov C
 \\\\
 A Markov Chain is build on the idea that individuals can change between different states, which is defined as Markov states. In our model a Markov State is a specific health state. For any given point in time the individuals in the cohort has to appear in a Markov State, thus there cannot be individuals outside the defined states. Furthermore, the states are required to be mutually exclusive with no overlap allowed. An individual stay in a given health state for a fixed amount of time, a cycle. A cycle can be of any length and covers all the health states, why a cycle is of the same length for every state. At the end of every cycle the hypothetical individual either stay in their current health state or transitions to another.
 \\\\
-<<<<<<< HEAD
-The simplest Markov Chain model consists of 3 health states; Well, disease and dead. A graphic of this simple Markov Chain model can be examined in the influence diagram below.
-=======
 A simple Markov Chain model consisting of 3 health states; Well, disease and dead. A graphic of this simple Markov Chain model can be examined in the influence diagram below.
 \\\\
 \begin{figure}[h]
@@ -113,7 +117,6 @@ A simple Markov Chain model consisting of 3 health states; Well, disease and dea
 	\includegraphics[width=0.7\linewidth]{"Pictures/Markov simple"}
 	\caption*{Source}
 \end{figure}
->>>>>>> origin/master
 \\\\
 The arrows in the diagram above identifies the possible transitions between states. It is both possible to transition from well to disease and from disease to well, but once an individual has transitioned to dead, the individual is said to have reached an absorbing state. An absorbing state is defined by a 100\% probability of staying in that state and therefore a 0\% probability of transitioning to another state. 
 \\\\
@@ -164,6 +167,7 @@ DNSL!!!!!!!!
  \\\\
  P-dialysis are almost always performed at home (99\% of the time \cite{DNSL}), and we will assume that all patients getting P-dialysis, are doing the treatment at home. P-dialysis gives the patients more freedom and the patient can basically decide for themselves how often they would like to perform the dialysis. Even though the procedure for P-dialysis can differ, the patient needs to go to a check-up on the hospital every 6th week, furthermore there is a cost linked to training the patient to be able to carry out the dialysis at home \cite{P-dialyse}. 
 
+<<<<<<< Updated upstream
 \subsubsection*{Tranplantation Costs}
 
 When receiving a kidney, the kidney will either come from a living og deceased donor. In Denmark the share of kidneys recieved from deceased donors are 57,5\% whereas the share of kidneys received from a living donor is  42,5\% \cite{DNSL}. A deceased donor is assumed to donate 3,3 organs, and the price of the kidney donation from a living donor  is therefore divided by 3,3 to get the cost of getting a kidney from a deceased donor. 
@@ -173,6 +177,57 @@ The biggest cost in relation to a kidney  transplantation is the actual surgery.
 Another cost linked to a kidney transplant is if the transplantation is not succesful which means the kidney either undergoes graft failure or gets rejected. The probability of rejection is 18,5\% \cite{Rigshospitalet}, while the probability of graft failure is 4,9\% \cite{DNSL}. In this case, the patient will have to get dialysis.
 
 \subsection{Indirect Costs}
+=======
+
+
+
+
+
+\section{Tabeller}
+
+
+
+% latex table generated in R 3.2.2 by xtable 1.8-2 package
+% Thu Apr 20 15:05:04 2017
+\begin{adjustbox}{center}
+
+	\centering
+	\begin{tabular}{llrrrr}
+		\hline
+		Type & Procedure & Cost & Freq. & Weight & Yrl. Price \\ 
+		\hline
+		HD & At hospital & 1946.00 & 156.00 & 0.93 & 282325.68 \\ 
+		HD & At home check up & 21773.00 & 6.00 & 0.07 & 9144.66 \\ 
+		HD & Change to peritonal dialysis & 13111.00 & 1.00 & 0.03 & 413.00 \\ 
+		HD & Mortality & 0.00 & 1.00 & 0.19 & 0.00 \\ 
+		PD & At home  & 1695.00 & 156.00 & 1.00 & 264420.00 \\ 
+		PD & Home check up & 20484.00 & 8.67 & 1.00 & 177528.00 \\ 
+		PD & Change to haemodialysis & 16818.00 & 1.00 & 0.21 & 3521.69 \\ 
+		PD & Mortality & 0.00 & 1.00 & 0.16 & 0.00 \\ 
+		Transplantation & Deceased donor & 11034.11 & 1.00 & 0.63 & 6951.49 \\ 
+		Transplantation & Living donor & 55896.60 & 1.00 & 0.37 & 20681.74 \\ 
+		Transplantation & Transplantation, complicated & 540685.00 & 1.00 & 0.11 & 59475.35 \\ 
+		Transplantation & Transplantation, normal & 257992.00 & 1.00 & 0.89 & 229612.88 \\ 
+		Transplantation & Check-up & 1382.00 & 12.75 & 1.00 & 17620.50 \\ 
+		Transplantation & Payment by patient  & -3955.00 & 1.00 & 1.00 & -3955.00 \\ 
+		Transplantation & Rejection & 41509.00 & 1.00 & 0.18 & 7471.62 \\ 
+		Transplantation & Graft Failure & 41509.00 & 1.00 & 1.00 & 41509.00 \\ 
+		Transplantation & Change to p-dialysis & 13111.00 & 1.00 & 0.04 & 519.20 \\ 
+		Transplantation & Change to h-dialysis & 16818.00 & 1.00 & 0.17 & 2820.38 \\ 
+		Transplantation & Mortality & 0.00 & 1.00 & 0.03 & 0.00 \\ 
+		Transplantation & (Sandimmum Neoral) & 25.08 & 730.00 & 1.00 & 18308.40 \\ 
+		Transplantation & (Cellcept) & 23.26 & 730.00 & 1.00 & 16979.80 \\ 
+		Transplantation & (Prednisolon) & 2.99 & 730.00 & 1.00 & 2182.70 \\ 
+		Transplantation & Indirekte omkostning & 255438.55 & 1.00 & 1.00 & 255438.55 \\ 
+		Transplanteret & Indirekte omkostning & 200253.55 & 1.00 & 1.00 & 200253.55 \\ 
+		HD & Indirekte omkostning & 276441.49 & 1.00 & 1.00 & 276441.49 \\ 
+		PD & Indirekte omkostning & 231238.03 & 1.00 & 1.00 & 231238.03 \\ 
+		Dead & Indirekte omkostning & 356475.15 & 1.00 & 1.00 & 356475.15 \\ 
+		\hline
+	\end{tabular}
+
+\end{adjustbox}
+>>>>>>> Stashed changes
 
 
 \newpage
