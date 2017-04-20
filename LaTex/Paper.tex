@@ -75,9 +75,7 @@ The foundation for the Cost Utility Analysis is a Markov Chain model. A Markov C
 A Markov Chain is build on the idea that individuals can change between different states, which is defined as Markov states. In our model a Markov State is a specific health state. For any given point in time the individuals in the cohort has to appear in a Markov State, thus there cannot be individuals outside the defined states. Furthermore, the states are required to be mutually exclusive with no overlap allowed. An individual stay in a given health state for a fixed amount of time, a cycle. A cycle can be of any length and covers all the health states, why a cycle is of the same length for every state. At the end of every cycle the hypothetical individual either stay in their current health state or transitions to another.
 \\\\
 The simplest Markov Chain model consists of 3 health states; Well, disease and dead. A graphic of this simple Markov Chain model can be examined in the influence diagram below.
-\\\\
 
-\\\\
 The arrows in the diagram above identifies the possible transitions between states. It is both possible to transition from well to disease and from disease to well, but once an individual has transitioned to dead, the individual is said to have reached an absorbing state. An absorbing state is defined by a 100\% probability of staying in that state and therefore a 0\% probability of transitioning to another state. 
 \\\\
 The Markov States are tied together through a transition matrix which defines the conditional probability of moving from one Markov State to another, or staying in the current state, conditioned on the current state. The transition matrix is applied at the end of every cycle. The cycles continue for a fixed amount of time or until a specific level of convergence is met. Below the framework for the above illustrated Markov Chain model can be examined.
@@ -105,9 +103,6 @@ Once the cycle length has been determined based on sensible arguments, the time 
 Lastly in relation to time it is also beneficial to think about when a given cost and benefit is encountered. Therefore, it is the norm to implement a discount rate to establish a consistent measure of cost and benefits. A discount rate is typically chosen based on country standards for the specific analysis at hand.
 
 \subsubsection*{ICER}
-
-
-
 
 
 
