@@ -6,7 +6,7 @@
 ############################## INITIAL ##############################
 
 # Directory
-setwd("~/Dropbox/Emilie_Laurizen_Simon_Bjerg_Organdonationer/Modellering")
+setwd("~/Dropbox/Emilie_Laurizen_Simon_Bjerg_Organdonationer/GitHub/Modellering")
 
 # Indlæser bibliotek
 library("markovchain")
