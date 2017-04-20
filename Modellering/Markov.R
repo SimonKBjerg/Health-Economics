@@ -1,0 +1,240 @@
+
+
+############################## FINANCING THE PUBLIC HEALTH CARE SECTOR ##############################
+
+
+############################## INITIAL ##############################
+
+# Directory
+setwd("~/Dropbox/Emilie_Laurizen_Simon_Bjerg_Organdonationer/Modellering")
+
+# Indlæser bibliotek
+library("markovchain")
+library("xlsx")
+library("reshape2")
+
+# Loop funktion
+mloop <- function(mchain,initialstate,n) {
+  out<-data.frame()
+  names(initialstate)<-names(mchain)
+  for (i in 0:n)
+  {
+    iteration<-initialstate*mchain^(i)
+    out<-rbind(out,iteration)
+  }
+  out<-cbind(i=seq(0,n), out)
+  #out<-out[,c(4,1:3)]
+  return(out)
+}
+
+# Population
+n <- 1000
+
+# Indlæser priser
+priser <-  read.xlsx(file="./Data/Pristabel.xlsx", sheetName = "Sheet1")
+
+# Beregner årlig vægtet pris
+priser$yearly.price <- priser$Omkostninger.Kr.gang * priser$Antal.gange.year. * priser$Weight
+
+# Beregner de sygehusmæssige priser
+priser_sygehus <- priser[priser$Procedure != 'Indirekte omkostning',]
+
+# Aggregerer priserne på type
+priser_agg <- aggregate(priser$yearly.price,by=list(priser$Type),FUN = sum)
+names(priser_agg) <- c('Type','Yearly_price')
+
+# Aggregerer priserne på type for sygehus
+priser_agg_sygehus <- aggregate(priser_sygehus$yearly.price,by=list(priser_sygehus$Type),FUN = sum)
+names(priser_agg_sygehus) <- c('Type','Yearly_price')
+
+# QALY
+QALY <- read.xlsx(file = "./Data/Nytte.xlsx", sheetName = "Sheet1")
+names(QALY)[names(QALY) == 'Nytte'] <- 'QALY'
+
+
+
+
+
+############################## DIALYSE SAMFUND ##############################
+
+# Initial fordellingsnøgle (HD PD DEAD)
+dialyse_share <- c(0.789, 0.211, 0)
+
+# Initialle stadier
+dialyse_n <- n*dialyse_share
+
+# Transitionsmatrix
+dialyse_trans <- read.xlsx(file="./Data/Sandsynlighedsmatricer.xlsx", sheetName = "Dialyse")
+dialyse_trans$Fra <- NULL
+
+# Markov model
+dialyse_mc <- new("markovchain", transitionMatrix=as.matrix(dialyse_trans), name = "Dialyse model")
+
+# Evaluerer model i forskellige perioder
+dialyse_out <- mloop(mchain=dialyse_mc,initialstate=dialyse_n,n=5)
+
+# Transpose data
+dialyse_out <- (melt(dialyse_out,id=c("i"))) 
+names(dialyse_out) <- c('Periode','Type','Antal')
+
+# Join med priser
+dialyse_out <- merge(dialyse_out,priser_agg, by.x = "Type", by.y ="Type", all.x = TRUE )
+
+# Join med QALY
+dialyse_out <- merge(dialyse_out,QALY, by.x = "Type", by.y ="Type", all.x = TRUE)
+
+# Beregner total årlig omkostning
+dialyse_out$total_yearly_price <- dialyse_out$Yearly_price * dialyse_out$Antal
+
+# Beregner total årlig QALY
+dialyse_out$total_yearly_QALY <- dialyse_out$QALY * dialyse_out$Antal
+
+# Tilføjer diskonteringsfaktor
+dialyse_out$diskontering <- (1+0.03)^-dialyse_out$Periode
+
+# Diskonterer priserne
+dialyse_out$TYP_disc <- dialyse_out$diskontering * dialyse_out$total_yearly_price
+
+# Diskonterer QALY
+dialyse_out$QALY_disc <- dialyse_out$diskontering * dialyse_out$total_yearly_QALY
+
+
+
+
+
+
+############################## TRANSPLANTATIONER SAMFUND ##############################
+
+# Initial fordellingsnøgle (HD PD TRANSPLANTATION TRANSPLANTERET DEAD)
+transplant_share <- c(0.783039527, 0.216960473, 0, 0, 0)
+
+# Initialle stadier
+transplant_n <- n*transplant_share
+
+# Transitionsmatrix
+transplant_trans <- read.xlsx(file="./Data/Sandsynlighedsmatricer.xlsx", sheetName = "Transplant")
+transplant_trans$Fra <- NULL
+
+# Markov model
+transplant_mc <- new("markovchain", transitionMatrix=as.matrix(transplant_trans), name = "Transplantations model")
+
+# Evaluerer model i forskellige perioder
+transplant_out <- mloop(mchain=transplant_mc,initialstate=transplant_n,n=5)
+
+# Transpose data
+transplant_out <- (melt(transplant_out,id=c("i"))) 
+names(transplant_out) <- c('Periode','Type','Antal')
+
+# Join med priser
+transplant_out <- merge(transplant_out,priser_agg, by.x = "Type", by.y ="Type", all.x = TRUE )
+
+# Join med QALY
+transplant_out <- merge(transplant_out,QALY, by.x = "Type", by.y ="Type", all.x = TRUE)
+
+# Beregner total årlig omkostning
+transplant_out$total_yearly_price <- transplant_out$Yearly_price * transplant_out$Antal
+
+# Beregner total årlig QALY
+transplant_out$total_yearly_QALY <- transplant_out$QALY * transplant_out$Antal
+
+# Tilføjer diskonteringsfaktor
+transplant_out$diskontering <- (1+0.03)^-transplant_out$Periode
+
+# Diskonterer priserne
+transplant_out$TYP_disc <- transplant_out$diskontering * transplant_out$total_yearly_price
+
+# Diskonterer QALY
+transplant_out$QALY_disc <- transplant_out$diskontering * transplant_out$total_yearly_QALY
+
+
+
+
+
+
+############################## DIALYSE SYGEHUS ##############################
+
+# Evaluerer model i forskellige perioder
+dialyse_syg_out <- mloop(mchain=dialyse_mc,initialstate=dialyse_n,n=5)
+
+# Transpose data
+dialyse_syg_out <- (melt(dialyse_syg_out,id=c("i"))) 
+names(dialyse_syg_out) <- c('Periode','Type','Antal')
+
+# Join med priser
+dialyse_syg_out <- merge(dialyse_syg_out,priser_agg_sygehus, by.x = "Type", by.y ="Type", all.x = TRUE )
+
+# Join med QALY
+dialyse_syg_out <- merge(dialyse_syg_out,QALY, by.x = "Type", by.y ="Type", all.x = TRUE)
+
+# Beregner total årlig omkostning
+dialyse_syg_out$total_yearly_price <- dialyse_syg_out$Yearly_price * dialyse_syg_out$Antal
+
+# Beregner total årlig QALY
+dialyse_syg_out$total_yearly_QALY <- dialyse_syg_out$QALY * dialyse_syg_out$Antal
+
+# Tilføjer diskonteringsfaktor
+dialyse_syg_out$diskontering <- (1+0.03)^-dialyse_syg_out$Periode
+
+# Diskonterer priserne
+dialyse_syg_out$TYP_disc <- dialyse_syg_out$diskontering * dialyse_syg_out$total_yearly_price
+
+# Diskonterer QALY
+dialyse_syg_out$QALY_disc <- dialyse_syg_out$diskontering * dialyse_syg_out$total_yearly_QALY
+
+
+
+
+
+
+############################## TRANSPLANTATIONER SYGEHUS ##############################
+
+# Evaluerer model i forskellige perioder
+transplant_syg_out <- mloop(mchain=transplant_mc,initialstate=transplant_n,n=5)
+
+# Transpose data
+transplant_syg_out <- (melt(transplant_syg_out,id=c("i"))) 
+names(transplant_syg_out) <- c('Periode','Type','Antal')
+
+# Join med priser
+transplant_syg_out <- merge(transplant_syg_out,priser_agg_sygehus, by.x = "Type", by.y ="Type", all.x = TRUE )
+
+# Join med QALY
+transplant_syg_out <- merge(transplant_syg_out,QALY, by.x = "Type", by.y ="Type", all.x = TRUE)
+
+# Beregner total årlig omkostning
+transplant_syg_out$total_yearly_price <- transplant_syg_out$Yearly_price * transplant_syg_out$Antal
+
+# Beregner total årlig QALY
+transplant_syg_out$total_yearly_QALY <- transplant_syg_out$QALY * transplant_syg_out$Antal
+
+# Tilføjer diskonteringsfaktor
+transplant_syg_out$diskontering <- (1+0.03)^-transplant_syg_out$Periode
+
+# Diskonterer priserne
+transplant_syg_out$TYP_disc <- transplant_syg_out$diskontering * transplant_syg_out$total_yearly_price
+
+# Diskonterer QALY
+transplant_syg_out$QALY_disc <- transplant_syg_out$diskontering * transplant_syg_out$total_yearly_QALY
+
+
+
+
+
+
+
+############################## OUTPUT ##############################
+
+# Kombinerer markov modeller
+transplant_out$markov <- "Transplant"
+transplant_out$perspektiv <- "Samfund"
+dialyse_out$markov <- "Dialyse"
+dialyse_out$perspektiv <- "Samfund"
+dialyse_syg_out$markov <- "Dialyse"
+dialyse_syg_out$perspektiv <- "Sygehus"
+transplant_syg_out$markov <- "Transplant"
+transplant_syg_out$perspektiv <- "Sygehus"
+output <- rbind(transplant_out,dialyse_out,transplant_syg_out,dialyse_syg_out)
+
+# Udskriver til CSV
+write.csv(output, file = "./Output/output.csv")
+
