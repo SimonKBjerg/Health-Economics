@@ -1119,43 +1119,102 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 (/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen192
+\extrarowheight=\dimen193
+\NC@list=\toks44
+\extratabsurround=\skip51
+\backup@length=\skip52
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box43
+)
+\tc@llx=\dimen194
+\tc@lly=\dimen195
+\tc@urx=\dimen196
+\tc@ury=\dimen197
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen198
+\adjbox@Height=\dimen199
+\adjbox@Depth=\dimen256
+\adjbox@Totalheight=\dimen257
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count143
+LaTeX Info: Redefining \checkoddpage on input line 45.
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box44
+\sift@deathcycles=\count144
+\@vwid@loff=\dimen258
+\@vwid@roff=\dimen259
+))
+(/usr/local/texlive/2016/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+\c@r@tfl@t=\count145
+\rotFPtop=\skip53
+\rotFPbot=\skip54
+\rot@float@box=\box45
+\rot@mess@toks=\toks45
+)
 (./Paper.aux)
 \openout1 = `Paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count143
-\scratchdimen=\dimen192
-\scratchbox=\box43
-\nofMPsegments=\count144
-\nofMParguments=\count145
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count146
-\MPscratchDim=\dimen193
-\MPnumerator=\count147
-\makeMPintoPDFobject=\count148
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count146
+\scratchdimen=\dimen260
+\scratchbox=\box46
+\nofMPsegments=\count147
+\nofMParguments=\count148
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count149
+\MPscratchDim=\dimen261
+\MPnumerator=\count150
+\makeMPintoPDFobject=\count151
+\everyMPtoPDFconversion=\toks47
 ) ABD: EveryShipout initializing macros
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1175,8 +1234,9 @@ e
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box44
+\AtBeginShipoutBox=\box47
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -1186,7 +1246,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 31.
+Package hyperref Info: Link coloring OFF on input line 35.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1194,11 +1254,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count149
+\c@section@level=\count152
 )
-LaTeX Info: Redefining \ref on input line 31.
-LaTeX Info: Redefining \pageref on input line 31.
-LaTeX Info: Redefining \nameref on input line 31.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
 
 (./Paper.out) (./Paper.out)
 \@outlinefile=\write5
@@ -1212,103 +1272,103 @@ Paper.toc)
 \openout6 = `Paper.toc'.
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--76
 
  []
 
-[4] [5] <Pictures/QALY.png, id=85, 409.53pt x 300.12125pt>
+[4] [5] <Pictures/QALY.png, id=90, 409.53pt x 300.12125pt>
 File: Pictures/QALY.png Graphic file (type png)
 
 <use Pictures/QALY.png>
-Package pdftex.def Info: Pictures/QALY.png used on input line 74.
+Package pdftex.def Info: Pictures/QALY.png used on input line 81.
 (pdftex.def)             Requested size: 272.99881pt x 200.07729pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
 
  []
 
 [6 <./Pictures/QALY.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
-<Pictures/ICER.png, id=97, 419.5675pt x 276.03125pt>
+<Pictures/ICER.png, id=102, 419.5675pt x 276.03125pt>
 File: Pictures/ICER.png Graphic file (type png)
  <use Pictures/ICER.png>
-Package pdftex.def Info: Pictures/ICER.png used on input line 90.
+Package pdftex.def Info: Pictures/ICER.png used on input line 97.
 (pdftex.def)             Requested size: 272.99881pt x 179.6035pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--97
+Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
 [7 <./Pictures/ICER.png>]
-<"Pictures/Markov simple".png, id=111, 971.63pt x 579.16376pt>
+<"Pictures/Markov simple".png, id=116, 971.63pt x 579.16376pt>
 File: "Pictures/Markov simple".png Graphic file (type png)
 
 <use "Pictures/Markov simple".png>
-Package pdftex.def Info: "Pictures/Markov simple".png used on input line 113.
+Package pdftex.def Info: "Pictures/Markov simple".png used on input line 117.
 (pdftex.def)             Requested size: 272.99881pt x 162.7215pt.
 
-<"Pictures/Transition matrix".png, id=112, 760.8425pt x 173.64874pt>
+<"Pictures/Transition matrix".png, id=117, 760.8425pt x 173.64874pt>
 File: "Pictures/Transition matrix".png Graphic file (type png)
 
 <use "Pictures/Transition matrix".png>
 Package pdftex.def Info: "Pictures/Transition matrix".png used on input line 12
-6.
+9.
 (pdftex.def)             Requested size: 272.99881pt x 62.30682pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--128
+Underfull \hbox (badness 10000) in paragraph at lines 107--131
 
  []
 
@@ -1317,60 +1377,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--128
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
 
  []
 
 [9 <./Pictures/Markov simple.png>] [10 <./Pictures/Transition matrix.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--154
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--154
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
+Underfull \hbox (badness 10000) in paragraph at lines 160--163
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 163--166
+Underfull \hbox (badness 10000) in paragraph at lines 166--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--174
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--174
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
-[13] [14] [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
+[13] [14] [15] [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 266.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 266.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 266.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 266.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
-(rerunfilecheck)             Checksum: 3311C4C03ACEA0E9BC255D777637797B;587.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
+(rerunfilecheck)             Checksum: D15CDE0C0261327CCA92A22ECBB4EE11;630.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 266.
  ) 
 Here is how much of TeX's memory you used:
- 18968 strings out of 493014
- 350021 string characters out of 6133351
- 416201 words of memory out of 5000000
- 22099 multiletter control sequences out of 15000+600000
+ 19606 strings out of 493014
+ 360561 string characters out of 6133351
+ 440490 words of memory out of 5000000
+ 22701 multiletter control sequences out of 15000+600000
  10854 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,92p,929b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1381,10 +1441,10 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr
 /local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Paper.pdf (15 pages, 337309 bytes).
+Output written on Paper.pdf (16 pages, 338633 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 179 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
