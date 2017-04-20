@@ -7,4 +7,4 @@
 \contentsline {subsection}{\numberline {2.2}Markov Chain model}{8}{subsection.2.2}
 \contentsline {section}{\numberline {3}Costs}{12}{section.3}
 \contentsline {subsection}{\numberline {3.1}Direct Costs}{12}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Indirect Costs}{13}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Indirect Costs}{14}{subsection.3.2}
