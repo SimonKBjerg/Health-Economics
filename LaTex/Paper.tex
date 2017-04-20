@@ -1,6 +1,5 @@
 %Preamble
 \documentclass[a4paper,12pt]{article}
-\usepackage[danish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{todonotes}
@@ -23,38 +22,89 @@
 \onehalfspacing
  
 % Opening
-\title{Organ donations}
-\author{Emilie Nordby \& Simon Bjerg}
+\title{Kidney disease \& Transplantations in Denmark}
+\author{Emilie Nordby Lauritzen \& Simon Kjær Bjerg}
 \date{20. April 2017}
-
 
 
 \begin{document}
 \maketitle
 \newpage
+
 \begin{abstract}
-
-
-Vores artikel handler om bla bla 
-
 \end{abstract}	
 \newpage
 \tableofcontents
 
 \newpage
-\section{Indledning}
+\section{Introduction}
 
-Vores artikel handler om bla bla
+\subsection{Background}
+
+Living with a kidney disease is a life changing diagnosis that XXX live with in Denmark every year. Even with modern medicine the only cure for kidney disease is receiving a new organ. This reality means that there is a tremendous demand for donor kidneys, a demand that by far is exceeding the supply. Every year XXX dies while on a waiting list for a new kidney. 
+\\\\
+A lot of paper argue that the current Danish kidney program is inefficient reference and that the amount of donor kidneys could be increased by implementing a donor system. If Denmark were to actually implement a donor kidney system, it would be based on the premise, that kidney transplantations is favored in a socio-economic perspective relative to the patients with a kidney disease just getting dialysis. Based on this argument the paper seeks to perform a Cost Utility Analysis on kidney transplants weighted against the alternative, dialysis.
+
+\subsection{Purpose}
+
+The purpose of this paper is to analyse and compare the possible means of treatment, for individuals living with kidney disease. The paper aims to illuminate the cost and benefits associated with the distinct treatment interventions.
+\\\\
+To make this comparison, the paper seeks to uncover the price of dialysis and kidney transplantations and on that basis estimate the cost of both interventions. Furthermore we seek to approximate the, before mentioned costs, in both a societal and regional perspective. Moreover we will investigate the effect of treatment in a Quality Adjusted Life Year framework, to better understand the associated output in addition to merely the costs.
+
+
+\subsection{Limitations \& assumptions}
+
+\section{Method}
+
+\subsection{Markov Chain model}
+
+The foundation for the Cost Utility Analysis is a Markov Chain model. A Markov Chain is a simple, yet powerful model, which is frequently applied in health economics. The Markov Chain model is used to explore the journey a hypothetical cohort of people can takes through a defined set of states. The journey of a person in the Markov Chain model is based on the probabilities of switching between these states.
+\\\\
+A Markov Chain is build on the idea that individuals can change between different states, which is defined as Markov states. In our model a Markov State is a specific health state. For any given point in time the individuals in the cohort has to appear in a Markov State, thus there cannot be individuals outside the defined states. Furthermore, the states are required to be mutually exclusive with no overlap allowed. An individual stay in a given health state for a fixed amount of time, a cycle. A cycle can be of any length and covers all the health states, why a cycle is of the same length for every state. At the end of every cycle the hypothetical individual either stay in their current health state or transitions to another.
+\\\\
+The simplest Markov Chain model consists of 3 health states; Well, disease and dead. A graphic of this simple Markov Chain model can be examined in the influence diagram below.
+\\\\
+The arrows in the diagram above identifies the possible transitions between states. It is both possible to transition from well to disease and from disease to well, but once an individual has transitioned to dead, the individual is said to have reached an absorbing state. An absorbing state is defined by a 100\% probability of staying in that state and therefore a 0\% probability of transitioning to another state. 
+\\\\
+The Markov States are tied together through a transition matrix which defines the conditional probability of moving from one Markov State to another, or staying in the current state, conditioned on the current state. The transition matrix is applied at the end of every cycle. The cycles continue for a fixed amount of time or until a specific level of convergence is met. Below the framework for the above illustrated Markov Chain model can be examined.
+
+
+
+\subsubsection*{Markov Trace}
+Mathematically the Markov Chain model works through matrix multiplication where the cohort is multiplied with the transition matrix for each period in the model. This mathematical framework has the implication of making the model memory free. The memory free model is a simplification which makes the math easier and requires less of the underlying data. The simplification means that the hypothetical cohort is presented with the same transition matrix each period regardless of the previous states, thus the transition probabilities are merely conditional on the current health state, not prior health states. 
+\\\\
+Initially the desired output of the model is what is known as the Markov Trace. The Markov Trace is the movement of the cohort between Markov States, throughout the timeline of the model. For every period of the model the amount of people in each state is calculated.
+
+\subsubsection*{Prices}
+Once the Markov Trace has been calculated the movement of the hypothetical cohort is known. This information allows for the calculation of a given medical intervention’s cost over a given timeframe. The amount of individuals in each state is simply multiplied with the cost associated with every state in a period. Once the price of every period has been calculated the total price for the timeframe of the model is apparent when summing the costs of the individual periods.
+
+\subsubsection*{QALY – Quality Adjusted Life Years}
+In what has been described at this point, this entire model has been cost focused, however there is another dimension to the calculation, the return to the encountered cost. In health economics Quality Adjusted Life Years is a common measure of the return to a given medical intervention. QALY measures the burden of disease and ranges from 1 and below. A QALY of 1 indicates full quality of a lived year, whilst a QALY lower than one identifies a life year of lesser quality than that of a life year in perfect health. A QALY of 0 is assigned to the state of being dead, while a QALY lower than 0 indicates a state deemed to be worse than dead. 
+
+\subsubsection*{Time \& Discounting}
+The Markov Chain model is heavily depended on time, as cycles is a core element of the model. This implication of time, means that cycle length and time horizon of the model potentially can have a great impact on the model output. The cycle length is determined by the minimum timeframe of a stage. This cycle length is chosen as all stages abide by the same time structure, meaning that all individuals will stay in a given stage for the full length of a cycle. In theory the cycle length can be decided arbitrarily, however in practice the minimum length of a distinct event is often chosen as it makes the analytical work easier. Sometimes events are combined to make more sensible cycle lengths. A hospitalization can easily include a variety of interventions (check of vitals, a scanning etc.) for ease these would typically be grouped together under the label hospitalization to keep a simpler cycle structure. 
+\\\\
+Previously when discussing the Markov Trace, transition probabilities were of great importance. Analytically it is therefore very important to consider how these probabilities are calculated based on the chosen cycle length.
+\\\\
+Once the cycle length has been determined based on sensible arguments, the time horizon of the model has to be determined. The time horizon determines the amount of periods or cycles the model is run for. The time horizon needs to be meaningful in relation to the analysis at hand, meaning that it needs to run long enough to capture both short term and long term effects of a given intervention. The typical time horizon for health analysis is the expected lifetime of the sample in question. Sometimes the time horizon will differ from the expected lifetime for a variety of reasons. One reason could be a preference from the decision maker and the receiver of the analysis. A governmental budget might be available on a two-year horizon, why the analysis might be required to run for the same timeframe. 
+\\\\
+Lastly in relation to time it is also beneficial to think about when a given cost and benefit is encountered. Therefore, it is the norm to implement a discount rate to establish a consistent measure of cost and benefits. A discount rate is typically chosen based on country standards for the specific analysis at hand.
+
+\subsubsection*{ICER}
+
+
+
+
+
+
 
 
 
 \newpage
 \begin{thebibliography}{9}
 
-\bibitem{churn}
-Daly, J. (2002), "Pricing for Profitability: Activity-Based Pricing for Competitive Advantage", John Wiley and Sons
-
-
+\bibitem{metodebog}
+Metodebog
 
 
 \end{thebibliography}	
