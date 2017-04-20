@@ -78,7 +78,8 @@ CUA is seen as a sophisticated version of CEA. This is because CUA is utility ba
 \subsubsection*{ICER}
 When comparing interventions, we would like to know how much better a intervention is against the next best alternative. This is done by using the Incremental cost effectiveness ratio (ICER). The ICER is calculated in the following way: 
 \\\\
-$$ICER=\dfrac{C_2-C_1}{E_2-E_1} =\dfrac{\varDelta C}{\varDelta E}$$
+\begin{equation} ICER=\dfrac{C_2-C_1}{E_2-E_1} =\dfrac{\varDelta C}{\varDelta E}
+\end{equation}
 \\\\
 where $ C_2$ is the cost of the intervention under investigation, $ E_2$ is the effectiveness of the intervention under investigations, $ C_1$ is the cost of the comparison, $ E_1$ is the effectiveness of the comparison. When using a CUA our effectiveness will be in QALY’s and the ICER will reflect the extra cost of one more QALY. This can be plotted in the figure below, where the South Eastern quadrant is seen as dominant, and the intervention of interest should be implemented. 
 
@@ -92,7 +93,7 @@ where $ C_2$ is the cost of the intervention under investigation, $ E_2$ is the 
 
 If results are plotted in the North Western Quadrant, then the alternative intervention will be dominant (the intervention of interest are both more expensive and less effective than the alternative). The last two quadrants (North East and South West) are a little more complicated, and in this case, the decision maker would set a ceiling ratio, which is the level of ICER which the intervention must meet to be cost effective and thereby implemented.   This ceiling is sometimes seen as a willingness to pay, i.e. the willingness to pay an extra QALY. 
 \\\\
-In this paper, we investigate if kidney transplantation is cost effective against the alternative, dialysis. As we want to take the quality of the patient’s life into account, we will choose to use a CUA, to compare the two treatments.  
+In this paper, we investigate whether kidney transplantation is cost effective against the alternative, dialysis. As we want to take the quality of the patient’s life into account, we will choose to use a CUA, to compare the two treatments.  
 
 \subsection{Markov Chain model}
 
@@ -149,11 +150,15 @@ Once the cycle length has been determined based on sensible arguments, the time 
 Lastly in relation to time it is also beneficial to think about when a given cost and benefit is encountered. Therefore, it is the norm to implement a discount rate to establish a consistent measure of cost and benefits. A discount rate is typically chosen based on country standards for the specific analysis at hand.
 
 
+\section{Costs}
+The CUA will both include direct and indirect costs. The direct costs are the costs directly linked to the treatment, where the indirect costs consider for example lost labor, early retirement etc.   Other papers have only looked at the direct costs \cite{CUAdkartikel}, but this does not take all of the relevant costs into account, as an early retirement can be the difference between being a net contributor or net gainer when it comes to public  benefits.  We there fore extend the analysis to take the indirect costs into account as well. 
 
+\subsection{Direct Costs}
+There are several costs linked to having a kidney disease. These costs are identified by using the Danish diagnose –related groups (DRG) tariffs and the Danish Ambulatory Groups System (DAGS) that represent the average public health-care cost for patient treatments and ambulatory visits \cite{takst}. All prices are in 2016 DKK prices so we can compare costs.
+\\\\
+ In regards to dialysis, there are as mentioned two different kinds the patient can choose between, P-dialysis and hemodialysis. The split between patients receiving P-dialysis and hemodialysis is 21,1\% and 78,9\% (evt fodnote omkring hvordan, det er fundet). Hemodialysis performed on a hospital requires 3 treatments a week, whereas P-dialysis gives the patients more freedom and the patient can basically decide for themselves how often they would like to perform the dialysis. Even though the procedure for p-dialysis can differ,  the patient needs to go to a check-up on the hospital every 6th week, furthermore there is some cost linked to training the patient to be able to carry out the dialysis at home. 
 
-\section{Intro 2}
-
-Simons afsnit
+\subsection{Indirect Costs}
 
 
 \newpage
@@ -167,6 +172,12 @@ Christiansen; 2010
 
 \bibitem{CUAbog}
 CUA bog
+
+\bibitem{CUAdkartikel}
+In dk .... 
+
+\bibitem{takst}
+Takstvejledning 2016
 
 \end{thebibliography}	
 	
