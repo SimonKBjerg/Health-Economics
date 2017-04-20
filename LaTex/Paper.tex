@@ -20,6 +20,7 @@
 \usepackage{booktabs}
 \usepackage{setspace}
 \onehalfspacing
+\graphicspath{ {/home/user/images/} }
  
 % Opening
 \title{Kidney disease \& Transplantations in Denmark}
@@ -58,14 +59,39 @@ To make this comparison, the paper seeks to uncover the price of dialysis and ki
 
 \subsection{Cost Effectiveness Models }
 
-When evaluating if a health program should be implemented or not, three different methods are commonly used; Cost Benefit Analysis (CBA), Cost Effectiveness Analysis (CEA) and Cost Utility Analysis (CUA). The approach and conclusion of the three methods differ, which makes them useful for different kinds of analyses. An effectiveness analysis consists of two parts, the costs and the effects of the intervention. The way the costs are estimated will generally be the same for the three effectiveness analyses, while the measurement of the effect will differ depending on the approach used (Christiansen; 2010). In the following we will outline the method for each of the effectiveness analysis above and from this deduct the method we will use in this paper.  
+When evaluating if a health program should be implemented or not, three different methods are commonly used; Cost Benefit Analysis (CBA), Cost Effectiveness Analysis (CEA) and Cost Utility Analysis (CUA). The approach and conclusion of the three methods differ, which makes them useful for different kinds of analyses. An effectiveness analysis consists of two parts, the costs and the effects of the intervention. The way the costs are estimated will generally be the same for the three effectiveness analyses, while the measurement of the effect will differ depending on the approach used \cite{Christiansen2010}. In the following we will outline the method for each of the effectiveness analysis above and from this deduct the method we will use in this paper.  
 \\\\
-The CBA is the simplest and least used effectiveness analysis of the three mentioned. A CBA will directly compare the monetary cost and benefit of one or more interventions and will always be conducted from the societies perspective. The CBA makes it easy to compare interventions because it is measured in monetary values, further more the CBA rests on the assumption that an intervention should only be implemented if the extra effectiveness (benefit) exceeds the extra cost of the intervention. (Edlin, McCabe, Hulme, Hall, Wright; 2014)
+The CBA is the least used effectiveness analysis of the three mentioned. A CBA will directly compare the monetary cost and benefit of one or more interventions and will always be conducted from the societies perspective. The CBA makes it easy to compare interventions because it is measured in monetary values, further more the CBA rests on the assumption that an intervention should only be implemented if the extra effectiveness (benefit) exceeds the extra cost of the intervention. (Edlin, McCabe, Hulme, Hall, Wright; 2014)
 \\\\
 A CEA relies on the assumption that the purpose of an effectiveness analysis should be to maximize what the decision maker would like to maximize. (Edlin, McCabe, Hulme, Hall, Wright; 2014) This means that a CEA only includes what the decision maker finds relevant, which additionally depends on the kind of decision maker, which could be society, public sector, health sector or something completely else. In contrast to a CBA, a CEA is measured in natural units such as Incremental Cost Utility Ratio, number of deaths avoided etc. It is worth to point out that the natural unit should be consistent, which means it cannot change depending on the individual or intervention looked at (Edlin, McCabe, Hulme, Hall, Wright; 2014). 
 \\\\
 CUA is seen as a sophisticated version of CEA. This is because CUA is utility based, which means the outcome of a CUA takes the patients health state into account opposed to a CEA. This is done by using quality adjusted life years (from now on referenced as QALY). This means that the effectiveness part of the analysis is weighted with how good the individual is feeling, 1 for perfect health, 0 for death. Due to this method we can compare how many QALY’s an intervention will produce compared to not implementing the intervention or implementing another intervention. 
 
+\begin{figure} [h]
+	\centering
+	\caption{Interpretation of QALY}
+	\label{fig:qaly}
+	\includegraphics[width=0.7\linewidth]{Pictures/QALY}
+	\caption*{Source:  \cite{CUAbog} }
+\end{figure}
+
+\subsubsection*{ICER}
+When comparing interventions, we would like to know how much better a intervention is against the next best alternative. This is done by using the Incremental cost effectiveness ratio (ICER). The ICER is calculated in the following way: 
+\\\\
+$$ICER=\dfrac{C_2-C_1}{E_2-E_1} =\dfrac{\varDelta C}{\varDelta E}
+\\\\
+
+where $ C_2$ is the cost of the intervention under investigation, $ E_2$ is the effectiveness of the intervention under investigations, $ C_1$ is the cost of the comparison, $ E_1$ is the effectiveness of the comparison. When using a CUA our effectiveness will be in QALY’s and the ICER will reflect the extra cost of one more QALY. This can be plotted in the figure below, where the South Eastern quadrant is seen as dominant, and the intervention of interest should be implemented. 
+
+\begin{figure} [h]
+	\centering
+	\caption{Plotting of ICER}
+	\label{fig:ICER}
+	\includegraphics[width=0.7\linewidth]{Pictures/ICER}
+	\caption*{Source:  \cite{CUAbog} }
+\end{figure}
+
+If results are plotted in the North Western Quadrant, then the alternative intervention will be dominant (the intervention of interest are both more expensive and less effective than the alternative). The last two quadrants (North East and South West) are a little more complicated, and in this case, the decision maker would set a ceiling ratio, which is the level of ICER which the intervention must meet to be cost effective and thereby implemented.   This ceiling is sometimes seen as a willingness to pay, i.e. the willingness to pay an extra QALY. 
 
 
 \subsection{Markov Chain model}
@@ -75,7 +101,7 @@ The foundation for the Cost Utility Analysis is a Markov Chain model. A Markov C
 A Markov Chain is build on the idea that individuals can change between different states, which is defined as Markov states. In our model a Markov State is a specific health state. For any given point in time the individuals in the cohort has to appear in a Markov State, thus there cannot be individuals outside the defined states. Furthermore, the states are required to be mutually exclusive with no overlap allowed. An individual stay in a given health state for a fixed amount of time, a cycle. A cycle can be of any length and covers all the health states, why a cycle is of the same length for every state. At the end of every cycle the hypothetical individual either stay in their current health state or transitions to another.
 \\\\
 The simplest Markov Chain model consists of 3 health states; Well, disease and dead. A graphic of this simple Markov Chain model can be examined in the influence diagram below.
-
+\\\\
 The arrows in the diagram above identifies the possible transitions between states. It is both possible to transition from well to disease and from disease to well, but once an individual has transitioned to dead, the individual is said to have reached an absorbing state. An absorbing state is defined by a 100\% probability of staying in that state and therefore a 0\% probability of transitioning to another state. 
 \\\\
 The Markov States are tied together through a transition matrix which defines the conditional probability of moving from one Markov State to another, or staying in the current state, conditioned on the current state. The transition matrix is applied at the end of every cycle. The cycles continue for a fixed amount of time or until a specific level of convergence is met. Below the framework for the above illustrated Markov Chain model can be examined.
@@ -102,16 +128,25 @@ Once the cycle length has been determined based on sensible arguments, the time 
 \\\\
 Lastly in relation to time it is also beneficial to think about when a given cost and benefit is encountered. Therefore, it is the norm to implement a discount rate to establish a consistent measure of cost and benefits. A discount rate is typically chosen based on country standards for the specific analysis at hand.
 
-\subsubsection*{ICER}
 
+
+
+\section{Intro 2}
+
+Simons afsnit
 
 
 \newpage
 \begin{thebibliography}{9}
 
 \bibitem{metodebog}
-Cost effectiveness Modelling for Health Technology Assessment
+Metodebog
 
+\bibitem{Christiansen2010}
+Christiansen; 2010
+
+\bibitem{CUAbog}
+CUA bog
 
 \end{thebibliography}	
 	
