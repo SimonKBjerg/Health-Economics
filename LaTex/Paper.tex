@@ -66,7 +66,7 @@ As all modelling presented in this analysis is carried out based on aggregated d
 Furthermore the paper assumes a discrete time horizon, why all cost and benefits accrued on a periodical level, and evaluated at the end of each year.
 
 
-\section{Method}
+\section{Theory and Method}
 
 \subsection{Cost Effectiveness Models}
 
@@ -74,10 +74,13 @@ When evaluating if a health program should be implemented or not, three differen
 \\\\
 The CBA is the least used effectiveness analysis of the three mentioned. A CBA will directly compare the monetary cost and benefit of one or more interventions and will always be conducted from the societies perspective. The CBA makes it easy to compare interventions because it is measured in monetary values, further more the CBA rests on the assumption that an intervention should only be implemented if the extra effectiveness (benefit) exceeds the extra cost of the intervention. (Edlin, McCabe, Hulme, Hall, Wright; 2014)
 \\\\
-A CEA relies on the assumption that the purpose of an effectiveness analysis should be to maximize what the decision maker would like to maximize. (Edlin, McCabe, Hulme, Hall, Wright; 2014) This means that a CEA only includes what the decision maker finds relevant, which additionally depends on the kind of decision maker, which could be society, public sector, health sector or something completely else. In contrast to a CBA, a CEA is measured in natural units such as Incremental Cost Utility Ratio, number of deaths avoided etc. It is worth to point out that the natural unit should be consistent, which means it cannot change depending on the individual or intervention looked at (Edlin, McCabe, Hulme, Hall, Wright; 2014). 
-\\\\
-CUA is seen as a sophisticated version of CEA. This is because CUA is utility based, which means the outcome of a CUA takes the patients health state into account opposed to a CEA. This is done by using quality adjusted life years (from now on referenced as QALY). This means that the effectiveness part of the analysis is weighted with how good the individual is feeling, 1 for perfect health, 0 for death. Due to this method we can compare how many QALY’s an intervention will produce compared to not implementing the intervention or implementing another intervention. 
+A CEA relies on the assumption that the purpose of an effectiveness analysis should be to maximize what the decision maker would like to maximize. (Edlin, McCabe, Hulme, Hall, Wright; 2014) This means that a CEA only includes what the decision maker finds relevant, which additionally depends on the kind of decision maker, which could be society, public sector, health sector or something completely else. In contrast to a CBA, a CEA is measured in natural units such as Incremental Cost Utility Ratio, number of deaths avoided etc. It is worth to point out that the natural unit should be consistent, which means it cannot change depending on the individual or intervention looked at (Edlin, McCabe, Hulme, Hall, Wright; 2014). CUA is seen as a sophisticated version of CEA, because a CUA is utility based. This means the outcome of a CUA takes the patients health state into account opposed to a CEA. 
 
+\subsubsection*{QALY – Quality Adjusted Life Years}
+I. In health economics Quality Adjusted Life Years is a common measure of the effectiveness of a given medical intervention. QALY measures the burden of disease and ranges from 1 and below. A QALY of 1 indicates full quality of a lived year (a healthy year), whilst a QALY lower than one identifies a life year of lesser quality than that of a life year in perfect health. A QALY of 0 is assigned to the state of being dead, while a QALY lower than 0 indicates a state deemed to be worse than dead.
+\\\\
+In a CUA we can use QALY to weigh the effectiveness of the intervention. Practically, this means that the interventions may give the same outcome in terms of living years, but with QALY we can take into account how well the patients feel in these years. The picture below shows how different QALY and Life Years after a treatment can be depicted. The area below the different graphs will then be the actual healthy years lived by the patient for each treatment. 
+  
 \begin{figure} [h]
 	\centering
 	\caption{Interpretation of QALY}
@@ -144,8 +147,6 @@ Initially the desired output of the model is what is known as the Markov Trace. 
 \subsubsection*{Prices}
 Once the Markov Trace has been calculated the movement of the hypothetical cohort is known. This information allows for the calculation of a given medical intervention’s cost over a given timeframe. The amount of individuals in each state is simply multiplied with the cost associated with every state in a period. Once the price of every period has been calculated the total price for the timeframe of the model is apparent when summing the costs of the individual periods.
 
-\subsubsection*{QALY – Quality Adjusted Life Years}
-In what has been described at this point, this entire model has been cost focused, however there is another dimension to the calculation, the return to the encountered cost. In health economics Quality Adjusted Life Years is a common measure of the return to a given medical intervention. QALY measures the burden of disease and ranges from 1 and below. A QALY of 1 indicates full quality of a lived year, whilst a QALY lower than one identifies a life year of lesser quality than that of a life year in perfect health. A QALY of 0 is assigned to the state of being dead, while a QALY lower than 0 indicates a state deemed to be worse than dead. 
 
 \subsubsection*{Time \& Discounting}
 The Markov Chain model is heavily depended on time, as cycles is a core element of the model. This implication of time, means that cycle length and time horizon of the model potentially can have a great impact on the model output. The cycle length is determined by the minimum timeframe of a stage. This cycle length is chosen as all stages abide by the same time structure, meaning that all individuals will stay in a given stage for the full length of a cycle. In theory the cycle length can be decided arbitrarily, however in practice the minimum length of a distinct event is often chosen as it makes the analytical work easier. Sometimes events are combined to make more sensible cycle lengths. A hospitalization can easily include a variety of interventions (check of vitals, a scanning etc.) for ease these would typically be grouped together under the label hospitalization to keep a simpler cycle structure. 
@@ -215,6 +216,10 @@ LAV TIL 2016 tal!!!!!!!
 When getting a kidney transplant, you are supposed to be on sick leave for 3 months cite\{Rigshospitalet\}. During the sick leave you will be compensated with sickness benefits from the Danish Government (Syge dagpenge), which is 4.245 DKK per week and 114,73 per hour \cite{borger.dk}. These sickness benefits received in the preceding three months of the surgery will be a part of the indirect costs for the transplanted individual.
 \\\\
 With the numbers from the analysis above, we can calculate the production loss due to dialysis and kidney transplants respectively. The results is found in Table XXX and shows that the production loss when getting hemodialysis is the biggest followed by the patients having gotte a kidney transplant recently. The reason for the production loss for recently transplanted patients being so high is the sick benefits, the patient will receive the preceding 3 months. After the first year og having a transplant, the transplanted group will have a significantly lower production loss compared to the three other groups. 
+
+\section{Effectiveness}
+As explained in the sections above, QALY can be used to 
+
 
 \section{Tabeller}
 
