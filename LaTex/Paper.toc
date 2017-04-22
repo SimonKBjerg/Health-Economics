@@ -9,4 +9,8 @@
 \contentsline {subsection}{\numberline {3.1}Direct Costs}{14}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Indirect Costs}{15}{subsection.3.2}
 \contentsline {section}{\numberline {4}Effectiveness}{18}{section.4}
+<<<<<<< HEAD
 \contentsline {section}{\numberline {5}Tabeller}{19}{section.5}
+=======
+\contentsline {section}{\numberline {5}Tabeller}{18}{section.5}
+>>>>>>> origin/master
