@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.20)  22 APR 2017 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.4.20)  22 APR 2017 14:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1302,7 +1302,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--78
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
 
  []
 
@@ -1310,20 +1315,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--83
 File: Pictures/QALY.png Graphic file (type png)
 
 <use Pictures/QALY.png>
-Package pdftex.def Info: Pictures/QALY.png used on input line 88.
+Package pdftex.def Info: Pictures/QALY.png used on input line 90.
 (pdftex.def)             Requested size: 272.99881pt x 200.07729pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--99
+Underfull \hbox (badness 10000) in paragraph at lines 98--101
 
  []
 
@@ -1331,10 +1336,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--99
 <Pictures/ICER.png, id=118, 419.5675pt x 276.03125pt>
 File: Pictures/ICER.png Graphic file (type png)
  <use Pictures/ICER.png>
-Package pdftex.def Info: Pictures/ICER.png used on input line 104.
+Package pdftex.def Info: Pictures/ICER.png used on input line 106.
 (pdftex.def)             Requested size: 272.99881pt x 179.6035pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
+Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
  []
 
@@ -1343,7 +1348,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--111
 File: "Pictures/Markov simple".png Graphic file (type png)
 
 <use "Pictures/Markov simple".png>
-Package pdftex.def Info: "Pictures/Markov simple".png used on input line 124.
+Package pdftex.def Info: "Pictures/Markov simple".png used on input line 126.
 (pdftex.def)             Requested size: 272.99881pt x 162.7215pt.
 
 <"Pictures/Transition matrix".png, id=128, 760.8425pt x 173.64874pt>
@@ -1351,35 +1356,35 @@ File: "Pictures/Transition matrix".png Graphic file (type png)
 
 <use "Pictures/Transition matrix".png>
 Package pdftex.def Info: "Pictures/Transition matrix".png used on input line 13
-6.
+8.
 (pdftex.def)             Requested size: 272.99881pt x 62.30682pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--138
+Underfull \hbox (badness 10000) in paragraph at lines 116--140
 
  []
 
@@ -1387,122 +1392,122 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--138
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 143--146
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
 
  []
 
 [10 <./Pictures/Markov simple.png> <./Pictures/Transition matrix.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 152--159
+Underfull \hbox (badness 10000) in paragraph at lines 154--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--159
+Underfull \hbox (badness 10000) in paragraph at lines 154--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--159
+Underfull \hbox (badness 10000) in paragraph at lines 154--161
 
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 178--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--183
+Underfull \hbox (badness 10000) in paragraph at lines 180--185
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--203
+Underfull \hbox (badness 10000) in paragraph at lines 192--205
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 206--209
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 
-Overfull \hbox (4.90004pt too wide) in paragraph at lines 211--213
+Overfull \hbox (4.90004pt too wide) in paragraph at lines 213--215
 \OT1/cmr/m/n/10.95 Source: num-bers are found on http://www.dst.dk/ in ta-ble A
 UL1, RAS300, ERHV1
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 216.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 218.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--219
+Underfull \hbox (badness 10000) in paragraph at lines 216--221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--219
+Underfull \hbox (badness 10000) in paragraph at lines 216--221
 
  []
 
 [16] [17] [18] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 320.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 320.
  (./Paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 320.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 320.
 Package rerunfilecheck Info: File `Paper.out' has not changed.
 (rerunfilecheck)             Checksum: 9154925D5FCC4DC36399A15A746B8EC5;690.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 320.
  ) 
 Here is how much of TeX's memory you used:
  19645 strings out of 493014
  361096 string characters out of 6133351
- 440613 words of memory out of 5000000
+ 441613 words of memory out of 5000000
  22724 multiletter control sequences out of 15000+600000
  11201 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1516,10 +1521,10 @@ sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Paper.pdf (19 pages, 378846 bytes).
+Output written on Paper.pdf (19 pages, 379535 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
- 224 compressed objects within 3 object streams
+ 268 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
  63 named destinations out of 1000 (max. 500000)
  129 words of extra memory for PDF output out of 10000 (max. 10000000)
 
