@@ -22,6 +22,9 @@
 \usepackage{dcolumn}
 \usepackage{adjustbox}
 \usepackage{rotating}
+\usepackage{chngpage}
+\usepackage{booktabs,caption}
+\usepackage[flushleft]{threeparttable}
 \onehalfspacing
 \graphicspath{ {/home/user/images/} }
 
@@ -205,51 +208,136 @@ To include this cost for the society, we calculate the average wage for an indiv
 \section{Tabeller}
 
 
-
-% latex table generated in R 3.2.2 by xtable 1.8-2 package
-% Thu Apr 20 15:05:04 2017
-\begin{adjustbox}{center}
-
+% DIREKTE OMKOSTNINGER
+\begin{table}[ht]
 	\centering
-	\begin{tabular}{llrrrr}
+	\caption{Direct Cost}
+	\scalebox{0.8}{
+		\begin{tabular}{rllrrrr}
+			\hline
+			& Type & Procedure & Cost (DKK) & Freq. & Weight & Yrl. Price \\ 
+			\hline
+			1 & HD & At hospital & 1946.00 & 156.00 & 0.93 & 282325.68 \\ 
+			2 & HD & At home check up & 21773.00 & 6.00 & 0.07 & 9144.66 \\ 
+			3 & HD & Change to peritonal dialysis & 13111.00 & 1.00 & 0.03 & 413.00 \\ 
+			4 & HD & Mortality & 0.00 & 1.00 & 0.19 & 0.00 \\ 
+			5 & PD & At home  & 1695.00 & 156.00 & 1.00 & 264420.00 \\ 
+			6 & PD & Home check up & 20484.00 & 8.67 & 1.00 & 177528.00 \\ 
+			7 & PD & Change to haemodialysis & 16818.00 & 1.00 & 0.21 & 3521.69 \\ 
+			8 & PD & Mortality & 0.00 & 1.00 & 0.16 & 0.00 \\ 
+			9 & Transplantation & Deceased donor & 11034.11 & 1.00 & 0.57 & 6344.61 \\ 
+			10 & Transplantation & Living donor & 55896.60 & 1.00 & 0.42 & 23756.05 \\ 
+			11 & Transplantation & Transplantation, complicated & 540685.00 & 1.00 & 0.11 & 59475.35 \\ 
+			12 & Transplantation & Transplantation, normal & 257992.00 & 1.00 & 0.89 & 229612.88 \\ 
+			13 & Transplantation & Check-up & 1382.00 & 12.75 & 1.00 & 17620.50 \\ 
+			14 & Transplantation & Payment by patient  & -3955.00 & 1.00 & 1.00 & -3955.00 \\ 
+			15 & Transplantation & Rejection & 41509.00 & 1.00 & 0.18 & 7471.62 \\ 
+			16 & Transplantation & Graft Failure & 41509.00 & 1.00 & 1.00 & 41509.00 \\ 
+			17 & Transplantation & Change to peritonal dialysis & 13111.00 & 1.00 & 0.04 & 519.20 \\ 
+			18 & Transplantation & Change to haemodialysis & 16818.00 & 1.00 & 0.17 & 2820.38 \\ 
+			19 & Transplantation & Mortality & 0.00 & 1.00 & 0.03 & 0.00 \\ 
+			20 & Transplantation & Sandimmum Neoral & 25.08 & 730.00 & 1.00 & 18308.40 \\ 
+			21 & Transplantation & Cellcept & 23.26 & 730.00 & 1.00 & 16979.80 \\ 
+			22 & Transplantation & Prednisolon & 2.99 & 730.00 & 1.00 & 2182.70 \\ 
+			\hline
+		\end{tabular}
+	}
+	\caption*{Sources: }
+	\end{table}
+
+% QALY TABEL
+\begin{table}[ht]
+	\centering
+	\caption{QALY} 
+	\scalebox{0.8}{
+		\begin{tabular}{rlrlrl}
+			\hline
+			& Category & QALY & Interval & Std. Dev. & Conf. Inter. \\ 
+			\hline
+			1 & Transplanted patients & 0.86 & 0,556-1,0 & 0.13 & 0,805-0,915 \\ 
+			2 & Patients in P-dialysis & 0.65 & 0,433-1,0 & 0.15 & 0,589-0,711 \\ 
+			3 & Patients in H-dialysis & 0.44 & 0,312-0,62 & 0.08 & 0,406-0,474 \\ 
+			4 & Patients in P-dialysis w. Infection & 0.63 &  &  &  \\ 
+			5 & Patients in H-dialysis w. Infection & 0.42 &  &  &  \\ 
+			6 & Death & 0.00 &  &  &  \\ 
+			\hline
+		\end{tabular}
+	}
+	\caption*{Sources: 1-5: \cite{metodebog}}
+	\end{table}
+
+
+% EMPLOYMENT TABLE
+\begin{table}[ht]
+	\centering
+	\caption{Employment shares \& Indirect costs}
+		\begin{threeparttable}
+			\begin{tabular}{lrrr}
+				\hline
+				Type & HD & PD & Transplanted \\ 
+				\hline
+				Employed (Share) & 0.18 & 0.31 & 0.40 \\ 
+				Unemployed (Share) & 0.82 & 0.69 & 0.60 \\ 
+				Adjusted for structural unemployment & 0.78 & 0.65 & 0.56 \\ 
+				\hline
+				Average cost 1st year (in DKK) & 276441 & 231238 & 255439 \\ 
+				Average cost 2nd year+ (in DKK) & 276441 & 231238 & 200254 \\ 
+				\hline
+			\end{tabular}
+		\begin{tablenotes}
+			\small
+			\item 
+			Sources \& notes: The average cost listed in the table represent the average cost associated with unemployment due to either being in dialysis or transplanted.
+		\end{tablenotes}
+	\end{threeparttable}
+\end{table}
+
+
+
+
+% TRANSITIONSMATRIX DIALYSE
+\begin{table}[ht]
+	\centering
+	\caption{Dialysis transition table} 
+		\begin{tabular}{l|rrr}
+			\hline
+			From / To & HD & PD & Dead \\ 
+			\hline
+			\hline
+			HD & 0.78 & 0.03 & 0.19 \\ 
+			PD & 0.21 & 0.63 & 0.16 \\ 
+			Dead & 0.00 & 0.00 & 1.00 \\ 
+			\hline
+		\end{tabular}
+\end{table}
+
+
+
+% TRANSITIONSMATRIX TRANSPLANTATION
+\begin{table}[ht]
+	\centering
+	\caption{Transplantation transition table} 
+	\begin{tabular}{l|rrrrr}
 		\hline
-		Type & Procedure & Cost & Freq. & Weight & Yrl. Price \\ 
+		From / To & HD & PD & Transplantation & Transplanted & Dead \\ 
 		\hline
-		HD & At hospital & 1946.00 & 156.00 & 0.93 & 282325.68 \\ 
-		HD & At home check up & 21773.00 & 6.00 & 0.07 & 9144.66 \\ 
-		HD & Change to peritonal dialysis & 13111.00 & 1.00 & 0.03 & 413.00 \\ 
-		HD & Mortality & 0.00 & 1.00 & 0.19 & 0.00 \\ 
-		PD & At home  & 1695.00 & 156.00 & 1.00 & 264420.00 \\ 
-		PD & Home check up & 20484.00 & 8.67 & 1.00 & 177528.00 \\ 
-		PD & Change to haemodialysis & 16818.00 & 1.00 & 0.21 & 3521.69 \\ 
-		PD & Mortality & 0.00 & 1.00 & 0.16 & 0.00 \\ 
-		Transplantation & Deceased donor & 11034.11 & 1.00 & 0.63 & 6951.49 \\ 
-		Transplantation & Living donor & 55896.60 & 1.00 & 0.37 & 20681.74 \\ 
-		Transplantation & Transplantation, complicated & 540685.00 & 1.00 & 0.11 & 59475.35 \\ 
-		Transplantation & Transplantation, normal & 257992.00 & 1.00 & 0.89 & 229612.88 \\ 
-		Transplantation & Check-up & 1382.00 & 12.75 & 1.00 & 17620.50 \\ 
-		Transplantation & Payment by patient  & -3955.00 & 1.00 & 1.00 & -3955.00 \\ 
-		Transplantation & Rejection & 41509.00 & 1.00 & 0.18 & 7471.62 \\ 
-		Transplantation & Graft Failure & 41509.00 & 1.00 & 1.00 & 41509.00 \\ 
-		Transplantation & Change to p-dialysis & 13111.00 & 1.00 & 0.04 & 519.20 \\ 
-		Transplantation & Change to h-dialysis & 16818.00 & 1.00 & 0.17 & 2820.38 \\ 
-		Transplantation & Mortality & 0.00 & 1.00 & 0.03 & 0.00 \\ 
-		Transplantation & (Sandimmum Neoral) & 25.08 & 730.00 & 1.00 & 18308.40 \\ 
-		Transplantation & (Cellcept) & 23.26 & 730.00 & 1.00 & 16979.80 \\ 
-		Transplantation & (Prednisolon) & 2.99 & 730.00 & 1.00 & 2182.70 \\ 
-		Transplantation & Indirekte omkostning & 255438.55 & 1.00 & 1.00 & 255438.55 \\ 
-		Transplanteret & Indirekte omkostning & 200253.55 & 1.00 & 1.00 & 200253.55 \\ 
-		HD & Indirekte omkostning & 276441.49 & 1.00 & 1.00 & 276441.49 \\ 
-		PD & Indirekte omkostning & 231238.03 & 1.00 & 1.00 & 231238.03 \\ 
-		Dead & Indirekte omkostning & 356475.15 & 1.00 & 1.00 & 356475.15 \\ 
+		\hline
+		HD & 0.73 & 0.03 & 0.06 & 0.00 & 0.19 \\ 
+		PD & 0.21 & 0.52 & 0.11 & 0.00 & 0.16 \\ 
+		Transplantation & 0.17 & 0.04 & 0.02 & 0.75 & 0.02 \\ 
+		Transplanted & 0.02 & 0.00 & 0.00 & 0.95 & 0.03 \\ 
+		Dead & 0.00 & 0.00 & 0.00 & 0.00 & 1.00 \\ 
 		\hline
 	\end{tabular}
+\end{table}
 
-\end{adjustbox}
+
+
 
 
 
 \newpage
+
 \begin{thebibliography}{9}
 
 \bibitem{metodebog}
